@@ -27,7 +27,7 @@ namespace RateLimiting
             if (requestCount >= _maxRequests)
             {
                 context.Response.StatusCode = StatusCodes.Status429TooManyRequests;
-                await context.Response.WriteAsync("Too many requests. Please try again later.");
+                await context.Response.WriteAsync("Sorovlar limitdan oshdi ");
                 return;
             }
 
